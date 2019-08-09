@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE2.png">
 <meta property="og:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE3.png">
 <meta property="og:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE4.png">
-<meta property="og:updated_time" content="2019-08-09T11:56:06.644Z">
+<meta property="og:updated_time" content="2019-08-09T13:58:09.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github搭建个人网站">
 <meta name="twitter:description" content="第一章主要步骤  安装git————-远程安装环境 安装node.js——–hexo安装环境 安装hexo ———-博客生成软件 github配置———远程托管网站 远程配置 ———–搭建远程 更换主题 ———–选择自己所喜风格">
@@ -179,13 +179,13 @@
 <li>安装hexo ———-博客生成软件</li>
 <li>github配置———远程托管网站</li>
 <li>远程配置 ———–搭建远程</li>
-<li>更换主题 ———–选择自己所喜风格<a id="more"></a>
-<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3></li>
-<li><em>具体操作*</em></li>
-<li>以下步骤都是基于Windows操作系统*</li>
+<li>更换主题 ———–选择自己所喜风格</li>
 </ul>
+<a id="more"></a>
+
+<h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><p><strong>具体操作</strong><br><em>以下步骤都是基于Windows操作系统</em></p>
 <h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>git<a href="https://git-scm.com/" target="_blank" rel="noopener">官网</a>直接下载git，并默认安装。<br>安装完成后，还需要最后一步设置，在命令行输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
 
 <p>因为Git是分布式版本控制系统，所以每个机器都必须自报家门：你的名字和Email地址。<br><em>建议</em>：</p>
 <p>1.建议先学习一些Linux命令，b站有<a href="https://www.bilibili.com/video/av15976434?from=search&seid=16920500767321526702" target="_blank" rel="noopener">视频</a>只需要了解一些简单命令，Linux命令在整个学习过程中都有用到，学会了更容易理解和操作；<br>2.然后再学git<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">教程</a>(当然可以b站找<a href="https://www.bilibili.com/video/av10475153?from=search&seid=15072902551637942848" target="_blank" rel="noopener">视频</a>结合学习)，再学习后面的教程，这个教程包括了github的配置。</p>
@@ -205,15 +205,14 @@
 <li>themes：主题</li>
 <li><em>config.yml：整个博客的配置</em></li>
 <li>db.json：source解析所得到的</li>
-<li>package.json：项目所需模块项目的配置信息</li>
-</ol>
-<p>为了检测我们的网站雏形，分别按顺序输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #清理缓存</span><br><span class="line">hexo g  #hexo generate 生效</span><br><span class="line">hexo s  #hexo server 启动服务预览</span><br></pre></td></tr></table></figure>
+<li>package.json：项目所需模块项目的配置信息<br>为了检测我们的网站雏形，分别按顺序输入以下命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #清理缓存</span><br><span class="line">hexo g  #hexo generate 生效</span><br><span class="line">hexo s  #hexo server 启动服务预览</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
 <p>这些命令在后面作介绍，完成后，打开浏览器输入地址：localhost:4000，即可看到搭建的博客内容。<br>到这里本地blog已经搭建完成，下面需要一些配置将搭建好的博客实现远程访问。</p>
 <h4 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h4><p><em>上面建议学完可以忽略github配置教程</em></p>
-<p>自行注册<a href="https://github.com/" target="_blank" rel="noopener">github账号</a>，由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：<br>第1步：创建SSH Key</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>自行注册<a href="https://github.com/" target="_blank" rel="noopener">github账号</a> ,由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：<br>第1步：创建SSH Key</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
 
 <p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：<br><img src="/img/github%E8%AE%BE%E7%BD%AE.png" alt="github设置.png"></p>
 <p><img src="/img/github%E8%AE%BE%E7%BD%AE2.png" alt="github设置2.png"></p>
