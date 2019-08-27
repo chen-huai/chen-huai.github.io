@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>陈淮个人网站</title>
+  <title>陈淮个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="陈淮个人网站">
+  <meta name="description" content="陈淮个人博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="陈淮个人网站">
+<meta property="og:title" content="陈淮个人博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="陈淮个人网站">
-<meta property="og:description" content="陈淮个人网站">
+<meta property="og:site_name" content="陈淮个人博客">
+<meta property="og:description" content="陈淮个人博客">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈淮个人网站">
-<meta name="twitter:description" content="陈淮个人网站">
+<meta name="twitter:title" content="陈淮个人博客">
+<meta name="twitter:description" content="陈淮个人博客">
   
-    <link rel="alternative" href="/atom.xml" title="陈淮个人网站" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="陈淮个人博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/ch.ico">
@@ -140,6 +140,197 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-黑苹果教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/26/黑苹果教程/">黑苹果教程</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/26/黑苹果教程/" class="archive-article-date">
+  	<time datetime="2019-08-25T16:36:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="第一章：目的"><a href="#第一章：目的" class="headerlink" title="第一章：目的"></a>第一章：目的</h3><p><em>将台式机安装成win10和黑苹果系统</em></p>
+<ul>
+<li>制作U盘启动</li>
+<li>EFI设置</li>
+<li>安装黑苹果<br>&lt;–more–&gt;</li>
+</ul>
+<h3 id="第二章：内容"><a href="#第二章：内容" class="headerlink" title="第二章：内容"></a>第二章：内容</h3><p>黑苹果制作主要是驱动能不能打上，所以不是所有电脑都可以安装黑苹果，需要上网确认。一般认为最基本的功能WiFi，显卡，声卡能驱动即可，其他的需要去不断完善。当然WiFi可以淘宝购买黑苹果USB免驱WiFi；声卡如果不能也可以买蓝牙免驱，然后用蓝牙音响即可（不是太方便，同时蓝牙可能有些延迟）；最重要的是显卡，一般inter的集成显卡都可以驱动（不太老的电脑），但是独立显卡不一定能，总之需要至少一个显卡可以驱动，如果都不行，请放弃吧（显卡不能驱动，基本视频等都不能用）。</p>
+<h4 id="制作U盘启动"><a href="#制作U盘启动" class="headerlink" title="制作U盘启动"></a>制作U盘启动</h4><p>制作黑苹果教程最好有macOS系统环境，虚拟机也可，以下教程均需要macOS系统。</p>
+<h5 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h5><ul>
+<li>系统镜像</li>
+<li>U盘大于8G</li>
+<li>etcher软件</li>
+</ul>
+<h5 id="开始制作"><a href="#开始制作" class="headerlink" title="开始制作"></a>开始制作</h5><ol>
+<li>系统<a href="https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html#more" target="_blank" rel="noopener">镜像下载</a>，可以在该博主的网站下载最新镜像，同时该博主有非常多的黑苹果教程，推荐看看。</li>
+<li>苹果系统下载etcher软件，并安装。</li>
+<li>打开镜像(.dmg格式)，选择U盘（可以提前用macOS的磁盘工具主分区格式化），点击Flash即可。</li>
+<li>有可能会安装失败，请重新安装即可。或者在win系统下用winmd5检查md5值，一致说明下载的系统镜像没问题。<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C0.png" alt="黑苹果0"><br>等待安装完成即可。</li>
+</ol>
+<h4 id="EFI设置"><a href="#EFI设置" class="headerlink" title="EFI设置"></a>EFI设置</h4><h5 id="将EFI文件复制到USB安装盘的EFI分区下"><a href="#将EFI文件复制到USB安装盘的EFI分区下" class="headerlink" title="将EFI文件复制到USB安装盘的EFI分区下"></a>将EFI文件复制到USB安装盘的EFI分区下</h5><p>前面的步骤仅仅是安装镜像，如何让电脑识别U盘并引导安装就需要EFI文件。前面的制作U盘其实已经将U盘的EFI位置大概200m分隔出来，只是无法看到。这时需要将磁盘信息显示出来即可。</p>
+<ol>
+<li><p>显示磁盘信息<br>打开终端，输入命令：<code>diskutil list</code>，会得到类似的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/dev/disk4 (disk image):</span><br><span class="line">   #:                       TYPE NAME                    SIZE   IDENTIFIER</span><br><span class="line">   0:      GUID_partition_scheme                        +8.0 GB     disk4</span><br><span class="line">   1:                        EFI EFI                     209.7 MB   disk4s1</span><br><span class="line">   2:                  Apple_HFS XiaoMiPro 10131         7.7 GB     disk4s2</span><br></pre></td></tr></table></figure>
+
+<p>可以看到EFI文件夹位置为<code>disk4s1</code>。</p>
+</li>
+<li><p>挂载<br>输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo diskutil mount disk4s1</span><br><span class="line">#输入密码即可</span><br><span class="line">open .</span><br><span class="line"></span><br><span class="line">注意：open 后面有个空格.</span><br></pre></td></tr></table></figure>
+
+<p>挂载成功后即可在访达中看到，类似于经过一番设置，显示出了隐藏文件夹。这样就可以将自己的EFI文件复制其中。<br><strong>也可以用clover软件重新安装一遍EFI，这样直接能看到文件夹。</strong></p>
+</li>
+</ol>
+<h5 id="EFI文件说明"><a href="#EFI文件说明" class="headerlink" title="EFI文件说明"></a>EFI文件说明</h5><p><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C1.png" alt="黑苹果1"><br>如图：EFI文件夹一般两个文件<code>BOOT</code>,<code>CLOVER</code><br>需要解释的是clover里面的文件：</p>
+<ol>
+<li>config.plist（默认名称）<br>引导文件，一般根据显卡，更名为默认名称即可。这样显卡就会直接驱动成功。</li>
+<li>drivers64UEFI<br>驱动文件，里面的驱动容易导致引导失败，因此我建议少装。当然如果原装的EFI文件里的能引导成功就不需要管。以下四个驱动是我找的，原理不清楚，试错得来的，如果不能引导，试试仅保留下面名称文件。<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C2.png" alt="黑苹果2"></li>
+<li>kexts<br>同样是驱动</li>
+</ol>
+<h4 id="安装黑苹果"><a href="#安装黑苹果" class="headerlink" title="安装黑苹果"></a>安装黑苹果</h4><h5 id="BIOS设置"><a href="#BIOS设置" class="headerlink" title="BIOS设置"></a>BIOS设置</h5><p>首先笔记本或者台式机需要对bios进行设置，才能正常引导，如：</p>
+<ol>
+<li>建议关闭<ul>
+<li>安全启动关闭</li>
+<li>快速启动关闭</li>
+<li>Wake on LAN. </li>
+<li>LAN/WLAN Switching </li>
+<li>Firewire. </li>
+<li>Parallels Port. </li>
+<li>Serial Port.</li>
+</ul>
+</li>
+<li>建议开启<ul>
+<li>UEFI安装（必须）</li>
+<li>优先USB引导</li>
+</ul>
+</li>
+</ol>
+<h5 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h5><ol>
+<li>进入clover主菜单，选择install安装Mac系统</li>
+<li>开始引导<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C02.png" alt="黑苹果02"><br>这一步容易出错，有啰嗦模式进行排错，具体看<a href="https://blog.daliansky.net/clover-user-manual.html" target="_blank" rel="noopener">教程</a>。</li>
+<li>选择语言</li>
+<li>磁盘工具<ul>
+<li>选择磁盘工具<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C3.png" alt="黑苹果3"></li>
+<li>选择显示所有设备<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C4.png" alt="黑苹果4"></li>
+<li>点击所要安装mac的硬盘，点击<code>抹掉</code>按钮，选择<code>Mac OS扩展(日志型)</code>，名称可自定义。<br><strong><em>假设您的磁盘是空的且数据是已经备份过的,别怪我没提醒你!!!</em></strong><br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C5.png" alt="黑苹果5"></li>
+</ul>
+</li>
+<li>开始安装，选择刚刚格式化的硬盘，一直按提示点击即可，一般选择不要联网的（网卡驱动没有）。<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C6.png" alt="黑苹果6"></li>
+<li>安装完成<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C7.png" alt="黑苹果7"></li>
+</ol>
+<h5 id="U盘启动改硬盘启动"><a href="#U盘启动改硬盘启动" class="headerlink" title="U盘启动改硬盘启动"></a>U盘启动改硬盘启动</h5><p>需要挂载U盘和硬盘中的EFI分区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diskutil list   #显示所有盘符</span><br><span class="line">sudo diskutil mount disk1s1 #选择需要挂载的硬盘，并输入密码</span><br><span class="line">open .  #打开它</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以将U盘的EFI文件下的文件复制到硬盘的EFI文件夹中，重启clover主界面选择<code>clover boot option</code>回车，选择<code>add clover boot option for all entries</code>按空格键，拔掉U盘即可。</p>
+<h5 id="clover主界面设置"><a href="#clover主界面设置" class="headerlink" title="clover主界面设置"></a>clover主界面设置</h5><h6 id="关闭多余启动项"><a href="#关闭多余启动项" class="headerlink" title="关闭多余启动项"></a>关闭多余启动项</h6><p>clover主界面有非常多的无关启动项，为了美观需要将之隐藏。主要就是将无用的启动项，用配置文件隐藏起来。<br>挂载硬盘EFI文件夹，使用工具clover configurator，点击clover文件夹中config.plist文件。<br><strong>注意备份文件，一般的是U盘文件不动，这样即使出错了，U盘启动还能用，进系统后再将硬盘中EFI覆盖，恢复原来的设置。</strong></p>
+<ol>
+<li><p>打开 <code>Clover configurator</code>，在左边的 <code>TOOLS</code> 里找到并点击 <code>Boot.log</code> 栏，点击右下角的 <code>Generate log</code>，生成日志，出现下图<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C8.png" alt="黑苹果8"></p>
+</li>
+<li><p>按下<code>Command+F</code> 调出搜索框，在里面输入 <code>ScanLoader</code> 进行搜索，下图红框圈出来的，位于 [xx]:启动项就是启动项名<br><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C9.png" alt="黑苹果9"></p>
+</li>
+<li><p>点击左边 <code>SECTIONS</code> 里的 <code>Gui</code> 栏，在 <code>Hide Volume</code> 里填入你想要隐藏的启动项名称即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Recovery</span><br><span class="line">VM</span><br><span class="line">Preboot</span><br><span class="line">注意：不带&apos; 哦</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C10.png" alt="黑苹果10"><br>退出保存，并重启计算机。</p>
+<h6 id="启动设置"><a href="#启动设置" class="headerlink" title="启动设置"></a>启动设置</h6><p>设置启动时间和默认启动系统<br>打开 <code>Clover configurator</code>，在左边 <code>SECTIONS</code> 里找到并点击<code>Boot</code> 栏，在图中找到 <code>Default Boot Volume</code>，选择<code>LastBootedVolume</code>，这样每次重新开机就好启动上次加载的系统啦当然，建议设置延时哦，这样方便切换系统</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x:Timeout</td>
+<td>延迟 x 秒启动</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>取消延迟启动</td>
+</tr>
+<tr>
+<td>Fast</td>
+<td>不显示 Clover 界面，快速启动</td>
+</tr>
+<tr>
+<td><img src="/img/%E9%BB%91%E8%8B%B9%E6%9E%9C11.png" alt="黑苹果11"></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>这样clover界面美化完成，重启电脑，看看自己的杰作吧。</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">黑苹果</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/26/黑苹果教程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-玩转yilia主题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -332,7 +523,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/08/hexo-github搭建个人网站/">hexo+github搭建个人网站</a>
+      <a class="article-title" href="/2019/08/08/hexo-github搭建个人网站/">hexo+github搭建个人博客</a>
     </h1>
   
 
@@ -345,7 +536,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="第一章：目的"><a href="#第一章：目的" class="headerlink" title="第一章：目的"></a>第一章：目的</h3><p><em>hexo+GitHub搭建个人网站</em><br><strong>主要步骤</strong></p>
+        <h3 id="第一章：目的"><a href="#第一章：目的" class="headerlink" title="第一章：目的"></a>第一章：目的</h3><p><em>hexo+GitHub搭建个人博客</em><br><strong>主要步骤</strong></p>
 <ul>
 <li>安装git————-远程安装环境</li>
 <li>安装node.js——–hexo安装环境</li>
@@ -520,6 +711,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">主题</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">黑苹果</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -579,6 +778,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="http://litten.me/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>litten博客</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://lawlite.me/2017/04/13/Hexo-Github%E5%AE%9E%E7%8E%B0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/#more" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Lawlite博客</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://blog.daliansky.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>黑果小兵</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://zuiyu1818.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>醉渔小站</a>
             </li>
           
         </ul>
