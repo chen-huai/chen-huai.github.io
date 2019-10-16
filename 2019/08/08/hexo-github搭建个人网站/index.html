@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="陈淮个人博客">
 <meta property="og:description" content="第一章：目的hexo+GitHub搭建个人博客主要步骤  安装git————-远程安装环境 安装node.js——–hexo安装环境 安装hexo ———-博客生成软件 github配置———远程托管网站 远程配置 ———–搭建远程 更换主题 ———–选择自己所喜风格">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE.png">
-<meta property="og:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE2.png">
-<meta property="og:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE3.png">
-<meta property="og:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE4.png">
-<meta property="og:updated_time" content="2019-08-28T15:55:32.086Z">
+<meta property="og:image" content="http://yoursite.com/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="http://yoursite.com/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE2.png">
+<meta property="og:image" content="http://yoursite.com/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE3.png">
+<meta property="og:image" content="http://yoursite.com/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE4.png">
+<meta property="og:updated_time" content="2019-10-16T03:25:43.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github搭建个人博客">
 <meta name="twitter:description" content="第一章：目的hexo+GitHub搭建个人博客主要步骤  安装git————-远程安装环境 安装node.js——–hexo安装环境 安装hexo ———-博客生成软件 github配置———远程托管网站 远程配置 ———–搭建远程 更换主题 ———–选择自己所喜风格">
-<meta name="twitter:image" content="http://yoursite.com/img/github%E8%AE%BE%E7%BD%AE.png">
+<meta name="twitter:image" content="http://yoursite.com/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE.png">
   
     <link rel="alternative" href="/atom.xml" title="陈淮个人博客" type="application/atom+xml">
   
@@ -219,10 +219,10 @@
 <p>自行注册<a href="https://github.com/" target="_blank" rel="noopener">github账号</a> ,由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：<br>第1步：创建SSH Key</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
 
-<p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：<br><img src="/img/github%E8%AE%BE%E7%BD%AE.png" alt="github设置.png"></p>
-<p><img src="/img/github%E8%AE%BE%E7%BD%AE2.png" alt="github设置2.png"></p>
-<p>第三步：创建远程库<br>创建一个与github用户名一致的repository，即username.github.io(必须是这种命名规则)<br><img src="/img/github%E8%AE%BE%E7%BD%AE3.png" alt="github设置3.png"></p>
-<h4 id="远程配置"><a href="#远程配置" class="headerlink" title="远程配置"></a>远程配置</h4><p>接下来在blog根目录里的_config.yml文件称为站点配置文件，即图片所示文件（如果不清楚可以b站找相关<a href="https://www.bilibili.com/video/av44544186?from=search&seid=8638809533597874960" target="_blank" rel="noopener">视频</a>）。<br><img src="/img/github%E8%AE%BE%E7%BD%AE4.png" alt="github设置4.png"></p>
+<p>你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：<br><img src="/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE.png" alt="github设置.png"></p>
+<p><img src="/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE2.png" alt="github设置2.png"></p>
+<p>第三步：创建远程库<br>创建一个与github用户名一致的repository，即username.github.io(必须是这种命名规则)<br><img src="/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE3.png" alt="github设置3.png"></p>
+<h4 id="远程配置"><a href="#远程配置" class="headerlink" title="远程配置"></a>远程配置</h4><p>接下来在blog根目录里的_config.yml文件称为站点配置文件，即图片所示文件（如果不清楚可以b站找相关<a href="https://www.bilibili.com/video/av44544186?from=search&seid=8638809533597874960" target="_blank" rel="noopener">视频</a>）。<br><img src="/img/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/github%E8%AE%BE%E7%BD%AE4.png" alt="github设置4.png"></p>
 <p>用编辑器打开此文件，找到deploy位置，并添加并保存文件。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git</span><br><span class="line">    （即clone仓库URL链接,#如：repo: https://github.com/chen-huai/chen-huai.github.io.git）</span><br><span class="line">    branch: master</span><br><span class="line">    </span><br><span class="line">    注意：</span><br><span class="line">这个文件冒号后面是要加一个空格，不然会报错。</span><br></pre></td></tr></table></figure>
 
@@ -516,6 +516,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工作</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">兴趣</a>
               </li>
              
@@ -528,15 +532,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">主题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -545,6 +541,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">主题</a>
               </li>
             
             <div class="clearfix"></div>
