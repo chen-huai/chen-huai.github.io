@@ -25,7 +25,7 @@ tags:
 #### 关于yilia主题所有文章显示不全问题
 如图：
 
-![yilia](/img/yilia设置.png)
+![yilia](/img/玩转yilia主题/yilia设置.png)
 在blog文件夹，输入代码：
 ```
 npm i hexo-generator-json-content --save
@@ -92,7 +92,7 @@ subnav:
 ```
 <!-- more -->
 ```
-![more](/img/yilia设置2.png)
+![more](/img/玩转yilia主题/yilia设置2.png)
 主题配置文件_config.yml，默认为more
 ```
 # 文章太长，截断按钮文字

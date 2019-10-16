@@ -80,17 +80,17 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
-![github设置.png](/img/github设置.png)
+![github设置.png](/img/hexo-github搭建个人网站/github设置.png)
 
-![github设置2.png](/img/github设置2.png)
+![github设置2.png](/img/hexo-github搭建个人网站/github设置2.png)
 
 
 第三步：创建远程库
 创建一个与github用户名一致的repository，即username.github.io(必须是这种命名规则)
-![github设置3.png](/img/github设置3.png)
+![github设置3.png](/img/hexo-github搭建个人网站/github设置3.png)
 #### 远程配置
 接下来在blog根目录里的_config.yml文件称为站点配置文件，即图片所示文件（如果不清楚可以b站找相关[视频](https://www.bilibili.com/video/av44544186?from=search&seid=8638809533597874960)）。
-![github设置4.png](/img/github设置4.png)
+![github设置4.png](/img/hexo-github搭建个人网站/github设置4.png)
 
 用编辑器打开此文件，找到deploy位置，并添加并保存文件。
 ```

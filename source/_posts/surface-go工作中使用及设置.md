@@ -33,19 +33,19 @@ surface便捷，在工作场景中有一些应用，尤其是对于移动化和�
 
 ###### 蓝牙链接：
 1. 进入设置界面
- ![surface1.png](/img/surface1.png)
+ ![surface1.png](/img/surface-go工作中使用及设置/surface1.png)
 2. 添加链接蓝牙
- ![surface2.png](/img/surface2.png)
+ ![surface2.png](/img/surface-go工作中使用及设置/surface2.png)
 ###### 笔的快捷键设置：
 1. 进入笔的设置界面
- ![surface3.png](/img/surface3.png)
+ ![surface3.png](/img/surface-go工作中使用及设置/surface3.png)
 2. 三种快捷方式选择
- ![surface4.png](/img/surface4.png)
+ ![surface4.png](/img/surface-go工作中使用及设置/surface4.png)
 3. 选择工作区域或类型
- ![surface5.png](/img/surface5.png)
- ![surface6.png](/img/surface6.png)
+ ![surface5.png](/img/surface-go工作中使用及设置/surface5.png)
+ ![surface6.png](/img/surface-go工作中使用及设置/surface6.png)
 4. 选择经典启动类型
- ![surface7.png](/img/surface7.png)
+ ![surface7.png](/img/surface-go工作中使用及设置/surface7.png)
  *该模式支持Ink格式，因此可以选择工作表格快捷方式，已达到快速启动工作表格的目的*
  
 ###### 工作表格（软件）要求：
@@ -53,15 +53,15 @@ surface便捷，在工作场景中有一些应用，尤其是对于移动化和�
   由于surface go的cpu性能较弱，文件大小可能就是决定开始工作的时间快慢，而快慢能较大的影响使用感受和工作效率。
  2. 尽可能选择点击或者选择填写模式： 
   要实现移动办公，surface go就应该像纸质工作簿，只需要用到笔在工作表中填写。受限于现在的技术状况，在电子文档中点击或者选择是最理想的填写方式。同时，excel格式比word格式好，毕竟excel有宏和关联，而你只需填写必要的数据或内容。所以，在设计工作表格时，应该有这种理念，虽然不是所有工作都能使用移动化办公，但是这种工作表格也不影响最原始的办公方式--打印出来，用笔填写。
-  ![surface8.gif](/img/surface8.GIF)
-  ![surface9.gif](/img/surface9.GIF)
-  ![surface009.gif](/img/surface009.GIF)
+  ![surface8.gif](/img/surface-go工作中使用及设置/surface8.GIF)
+  ![surface9.gif](/img/surface-go工作中使用及设置/surface9.GIF)
+  ![surface009.gif](/img/surface-go工作中使用及设置/surface009.GIF)
  3. 工作表格要根据实际情况，合理设计：
   移动办公，肯定是有一定的工作区间，有的工作间很大有的很小等等复杂的情况，根据工作内容合理设计表格，才能最大提高工作的舒适度和效率。
   例如：工作结束时，我需要检查几个点的情况，这时不合理的工作表格是这样安排的：
-  ![surface10.png](/img/surface10.png)
+  ![surface10.png](/img/surface-go工作中使用及设置/surface10.png)
   而合理的表格确是这样的：
-  ![surface11.png](/img/surface11.png)
+  ![surface11.png](/img/surface-go工作中使用及设置/surface11.png)
   很明显合理的工作表格，带来了工作上的舒适和工作效率上的提高。
   
 **移动办公也许还不是那么普及，但是绝对是未来发展的趋势，你只有提前上了高速列车，才有可能跟上前进的步伐**
