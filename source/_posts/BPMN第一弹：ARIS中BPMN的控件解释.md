@@ -20,6 +20,7 @@ tags:
 * data object
 
 <!-- more -->
+
 ### 第二章：内容
 #### pool---池
 ![4457a13a187084cf8acc2e7c6c575327.png](/img/BPMN第一弹：ARIS中BPMN的控件解释/aris1.png)
